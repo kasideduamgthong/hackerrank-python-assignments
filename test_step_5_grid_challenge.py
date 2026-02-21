@@ -9,10 +9,11 @@ class TestGridChallenge(unittest.TestCase):
         self.assertEqual(grid_challenge(grid), "YES")
         
     def test_invalid_grid(self):
-        # กรณีที่เรียงแถวแล้ว แต่คอลัมน์ (แนวตั้ง) ไม่เรียง
-        grid = ['ebacd', 'fghij', 'olmkn', 'trpqs', 'xywuv']
-        # แถวแรกเรียงเป็น 'abcde' แถวสอง 'fghij' 
-        # ต้องเช็คว่า 'a' < 'f' จริงไหมไปเรื่อยๆ
+        # ตารางนี้เมื่อเรียงแถวแล้ว จะได้:
+        # ['abc']
+        # ['abd']
+        # ['aac']  <-- แถวนี้แหละที่จะทำให้คอลัมน์ที่ 3 (c) พัง เพราะ 'd' > 'c'
+        grid = ['cba', 'dab', 'aca']
         self.assertEqual(grid_challenge(grid), "NO")
         
     def test_single_element(self):
