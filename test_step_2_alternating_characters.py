@@ -1,5 +1,5 @@
 import unittest
-from alternating_characters import alternating_characters
+from step_2_alternating_characters import alternating_characters
 
 class TestAlternatingCharacters(unittest.TestCase):
     

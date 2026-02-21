@@ -1,5 +1,5 @@
 import unittest
-from funny_string import funny_string
+from step_1_funny_string import funny_string
 
 class TestFunnyString(unittest.TestCase):
     
